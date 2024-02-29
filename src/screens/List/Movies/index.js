@@ -12,7 +12,7 @@ function Movies({item, setIsClicked, isClicked}) {
     <View style={moviesStyles.box}>
       <Row>
         <View style={{width:'50%'}}>
-          <Text style={moviesStyles.text}>
+          <Text style={moviesStyles.text}> 
             Movie Name:
           </Text>
         </View>
