@@ -75,13 +75,13 @@ function UpdateModal({item, updateModal, setUpdateModal, isClicked, setIsClicked
               <Button 
                 onPress={() => handleUpdatedMovie(item.id)}
                 text={'Submit'} 
-                navi_bar
+                movies
               />
 
               <Button
                 onPress={() => setUpdateModal(false)} 
                 text={'Close'}
-                navi_bar
+                movies
               />
             </Row>
           </>

@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "../../utils";
 
 export const listStyles = StyleSheet.create({
   list_content: {
@@ -13,19 +14,9 @@ export const listStyles = StyleSheet.create({
     display: 'flex',
     alignSelf: 'center',
     width: '95%',
-    height: 120,
-    padding: 2,
-    borderColor: 'blue',
+    height: 130,
+    padding: 6,
+    borderColor: `${Colors.blue}`,
     borderWidth: 1,
   },
-
-  modal: {
-    alignItems:'center',
-    justifyContent:'center',
-    height:'100%',
-    backgroundColor:'#00000099',
-    shadowColor:'#000',
-    elevation:9,
-    
-  }
 })

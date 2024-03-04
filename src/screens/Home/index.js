@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { Button, Container, Input, Separator } from "../../components";
 import { homeStyles } from "./style";
 import { JWT, NAME, PASSWORD } from "../../config";

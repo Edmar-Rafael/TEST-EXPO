@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { RefreshControl, SafeAreaView, ScrollView } from "react-native"
 import { refreshStyles } from "./styles"
+import { Colors } from "../../utils"
 
 function Refresh({isClicked, setIsClicked}) {
   const [refreshing, setRefreshing] = useState(false)
@@ -21,8 +22,8 @@ function Refresh({isClicked, setIsClicked}) {
           <RefreshControl
             refreshing={refreshing}
             onRefresh={onRefresh}
-            colors={['aqua']}
-            progressBackgroundColor={'black'}
+            colors={[`${Colors.aqua}`]}
+            progressBackgroundColor={`${Colors.black}`}
             size={'large'}
           />
         }

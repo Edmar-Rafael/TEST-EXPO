@@ -1,15 +1,16 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "../../utils";
 
 export const InputStyles = StyleSheet.create({
   input: {
     width: '50%',
     height: 25,
-    borderColor: 'black',
+    borderColor: `${Colors.black}`,
     borderWidth: 1,
     borderRadius: 5,
-    shadowColor: 'aqua',
+    shadowColor: `${Colors.aqua}`,
     elevation: 5,
-    backgroundColor: '#151515',
-    color: 'white'
+    backgroundColor: `${Colors.back_ground}`,
+    color: `${Colors.white}`
   }
 })

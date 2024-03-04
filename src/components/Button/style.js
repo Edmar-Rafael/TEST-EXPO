@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "../../utils";
 
 export const buttonStyles = StyleSheet.create({
   button: {
@@ -8,8 +9,8 @@ export const buttonStyles = StyleSheet.create({
     width: '50%',
     height: 25,
     borderRadius: 19,
-    backgroundColor: 'aqua',
-    shadowColor: 'black',
+    backgroundColor: `${Colors.aqua}`,
+    shadowColor: `${Colors.black}`,
     elevation: 9
   },
   movies: {
@@ -19,8 +20,8 @@ export const buttonStyles = StyleSheet.create({
     width: '25%',
     height: 20,
     borderRadius: 19,
-    backgroundColor: 'aqua',
-    shadowColor: 'black',
+    backgroundColor: `${Colors.aqua}`,
+    shadowColor: `${Colors.black}`,
     elevation: 9
   },
   navibar: {
@@ -30,8 +31,8 @@ export const buttonStyles = StyleSheet.create({
     width: '20%',
     height: 20,
     borderRadius: 19,
-    backgroundColor: 'aqua',
-    shadowColor: 'black',
+    backgroundColor: `${Colors.aqua}`,
+    shadowColor: `${Colors.white}`,
     elevation: 9
   },
 

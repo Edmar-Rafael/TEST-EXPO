@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "../../../utils";
 
 export const moviesStyles = StyleSheet.create({
   box: {
@@ -8,11 +9,15 @@ export const moviesStyles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     height: 110,
-    padding: 5,
+    borderWidth: 1,
+    borderColor: `${Colors.blue}`,
+    borderRadius: 2,
     gap: 2
   },
 
   text: {
-    color: 'white'
+    width: '50%',
+    paddingLeft: 2,
+    color: `${Colors.white}`
   }
 })

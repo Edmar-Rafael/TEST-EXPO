@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "../../utils";
 
 export const naviBarStyles = StyleSheet.create({
   navi_bar: {
@@ -7,6 +8,7 @@ export const naviBarStyles = StyleSheet.create({
     alignItems:'center',
     justifyContent: 'space-between',
     width: '100%',
-    backgroundColor:'#222'
+    padding: 2,
+    backgroundColor: `${Colors.black}`
   }
 })

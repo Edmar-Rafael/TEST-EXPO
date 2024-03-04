@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FlatList, View } from "react-native";
-import { Button, Container, Loading, Navibar, Refresh } from "../../components";
+import { Button, Container, Loading, Navibar, Refresh, Separator } from "../../components";
 import { logOut } from "../../store/ducks/login";
 import { useDispatch, useSelector } from "react-redux";
 import { listStyles } from "./style";
@@ -52,6 +52,7 @@ function List({ navigation }) {
                 />
               )
             }}
+            ItemSeparatorComponent={() => <Separator y={10}/>}
           />
         )}
         </SafeAreaView>
