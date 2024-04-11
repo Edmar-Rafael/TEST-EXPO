@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { View } from "react-native";
 import { Button, Container, Input, Separator } from "../../components";
 import { homeStyles } from "./style";
@@ -14,6 +14,8 @@ function Home() {
     name: '',
     password: ''
   })
+
+  const passwordRef = useRef('') 
 
   const dispatch = useDispatch()
 
@@ -38,16 +40,26 @@ function Home() {
         <Input
           onChangeText={(value) => handleOnChangeText(value, user.password)} 
           placeHolder={'test'}
+          label={'E-mail'}
           value={user.name}
+          keyBoardType='email-address'
+          returnKeyType='next'
+          onSubmitEditing={() => passwordRef.current.focus()}
         />
-        
+
+        <Separator y={22}/>
+                
         <Input 
           onChangeText={(value) => handleOnChangeText(user.name, value)}
           placeHolder={'test'}
+          label={'Password'}
+          secureTextEntry
           value={user.password}
+          returnKeyType="done"
+          inputRef={passwordRef}
         />
 
-        <Separator />
+        <Separator y={33}/>
 
         <Button 
           onPress={handleSubmit}

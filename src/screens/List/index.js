@@ -7,25 +7,33 @@ import { listStyles } from "./style";
 import Movies from "./Movies";
 import { requestMovies } from "../../store/ducks/moviesList";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useIsFocused } from "@react-navigation/native";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 
 function List({ navigation }) {
   const [isClicked, setIsClicked] = useState(false)
+
+  const isFocused = useIsFocused()
 
   const { data: moviesData, loading } = useSelector(({moviesListState}) => moviesListState)
 
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(requestMovies())
-  }, [dispatch, isClicked])
+    if(isFocused) {
+      dispatch(requestMovies())
+    }
+  }, [dispatch, isClicked, isFocused])
 
   return (
     <Container >
       <Navibar >
         <Button 
           onPress={() => navigation.navigate('Create')}
-          text={'To Create'}
+          text={'Create '}
           navi_bar
+          faIcon={faArrowRight}
         />
 
         <Button 

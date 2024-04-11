@@ -1,6 +1,8 @@
 import React from "react";
-import { Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import { buttonStyles } from "./style";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+
 
 function Button(rest) {
 
@@ -15,6 +17,12 @@ function Button(rest) {
       <Text style={rest.movies ? buttonStyles.text_movies : buttonStyles.text}>
         {rest.text}
       </Text>
+      {rest.faIcon ? (
+        <FontAwesomeIcon icon={rest.faIcon} />
+      ) : (
+        <View />
+      )}
+      
     </TouchableOpacity>
   )
 }

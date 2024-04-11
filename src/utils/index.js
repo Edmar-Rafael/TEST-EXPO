@@ -1,3 +1,6 @@
+import { useRef } from "react"
+import { Animated } from "react-native"
+
 export const Colors = {
   back_ground: '#151515',
   aqua: '#00ffff',
@@ -13,5 +16,8 @@ export const Colors = {
   placeholder: '#ffffff77',
   overlay_background: '#000000ab',
   blue: '#0000ff',
-  movies_background: '#333399'
+  movies_background: '#333399',
+  border: {
+    grey: '#ffffff66'
+  }
 }

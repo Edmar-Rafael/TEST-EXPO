@@ -14,7 +14,7 @@ export const listStyles = StyleSheet.create({
     display: 'flex',
     alignSelf: 'center',
     width: '95%',
-    height: 130,
+    height: 260,
     padding: 6,
     borderColor: `${Colors.blue}`,
     borderWidth: 1,

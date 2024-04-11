@@ -9,6 +9,7 @@ export const moviesStyles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     height: 110,
+    padding: 2,
     borderWidth: 1,
     borderColor: `${Colors.blue}`,
     borderRadius: 2,

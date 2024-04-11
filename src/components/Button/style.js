@@ -3,7 +3,7 @@ import { Colors } from "../../utils";
 
 export const buttonStyles = StyleSheet.create({
   button: {
-    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     width: '50%',
@@ -14,7 +14,7 @@ export const buttonStyles = StyleSheet.create({
     elevation: 9
   },
   movies: {
-    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     width: '25%',
@@ -25,7 +25,7 @@ export const buttonStyles = StyleSheet.create({
     elevation: 9
   },
   navibar: {
-    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     width: '20%',

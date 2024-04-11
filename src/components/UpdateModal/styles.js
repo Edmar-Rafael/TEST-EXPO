@@ -12,7 +12,7 @@ export const modalStyles = StyleSheet.create({
   card: {
     alignItems: 'center',
     justifyContent: 'center',
-    width: '70%',
+    width: '80%',
     height: 200,
     padding: 9,
     backgroundColor: `${Colors.modal_card_background}`,

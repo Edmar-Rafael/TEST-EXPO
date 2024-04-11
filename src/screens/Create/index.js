@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../../store/ducks/login";
 import { createStyles } from "./style";
 import { requestCreateMovie } from "../../store/ducks/creating";
+import { faReply } from "@fortawesome/free-solid-svg-icons";
+
 
 function Create({ navigation }) {
   const [newMovie, setNewMovie] = useState({
@@ -44,7 +46,8 @@ function Create({ navigation }) {
       <Navibar>
         <Button 
           onPress={() => navigation.popToTop()}
-          text={'To List'}
+          text={'To List '}
+          faIcon={faReply}
           navi_bar
         />
 
@@ -62,14 +65,16 @@ function Create({ navigation }) {
         <>
           <Input 
             onChangeText={(value) => handleOnChangeText(value, newMovie.review)}
-            placeHolder={'Movie Name'}
+            placeHolder={'Ex: True Lies'}
             value={newMovie.name}
+            label={'Movie Name'}
           />
 
           <Input 
             onChangeText={(value) => handleOnChangeText(newMovie.name, value)}
-            placeHolder={'Movie Review'}
+            placeHolder={'Ex: Very entertaining'}
             value={newMovie.review}
+            label={'Movie Review'}
           />
 
           <Separator />

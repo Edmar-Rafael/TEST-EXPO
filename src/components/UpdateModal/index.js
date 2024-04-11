@@ -54,8 +54,8 @@ function UpdateModal({item, updateModal, setUpdateModal, isClicked, setIsClicked
 
               <Input
                 onChangeText={(value) => handleOnChangeText(value, updatedMovie.newReview)} 
-                placeHolder={item.movie_name}
                 value={updatedMovie.newName}
+                label={updatedMovie.newName || item.movie_review}
               />
             </Row>
 
@@ -64,8 +64,8 @@ function UpdateModal({item, updateModal, setUpdateModal, isClicked, setIsClicked
 
               <Input 
                 onChangeText={(value) => handleOnChangeText(updatedMovie.newName, value)}
-                placeHolder={item.movie_review}
                 value={updatedMovie.newReview}
+                label={updatedMovie.newReview || item.movie_review}
               />
             </Row>
 

@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import { Text, View } from "react-native"
 import { moviesStyles } from "./styles"
-import { Button, DeleteModal, Row, Separator, UpdateModal } from "../../../components"
+import { Button, DeleteModal, Row, UpdateModal } from "../../../components"
+import { faPencil, faTrashAlt } from "@fortawesome/free-solid-svg-icons"
 
 
 function Movies({item, setIsClicked, isClicked}) {
@@ -9,59 +10,59 @@ function Movies({item, setIsClicked, isClicked}) {
   const [deleteModal, setDeleteModal] = useState(false)
 
   return (
-    <>
-      <View style={moviesStyles.box}>
-        <Row movies_background>
-          <Text style={moviesStyles.text}>
-            Movie Name:
-          </Text>
+    <View style={moviesStyles.box}>
+      <Row movies_background>
+        <Text style={moviesStyles.text}>
+          Movie Name:
+        </Text>
 
-          <Text style={moviesStyles.text}>
-            {item.movie_name}
-          </Text>
-        </Row>
+        <Text style={moviesStyles.text}>
+          {item.movie_name}
+        </Text>
+      </Row>
 
-        <Row movies_background>
-          <Text style={moviesStyles.text}>
-            Movie Review:
-          </Text>
+      <Row movies_background>
+        <Text style={moviesStyles.text}>
+          Movie Review:
+        </Text>
 
-          <Text style={moviesStyles.text}>
-            {item.movie_review}
-          </Text>
-        </Row>
+        <Text style={moviesStyles.text}>
+          {item.movie_review}
+        </Text>
+      </Row>
 
-        <Row>
-          <Button 
-            onPress={() => setUpdateModal(!updateModal)}
-            text={'Update'}
-            movies
-          />
-
-          <Button 
-            onPress={() => setDeleteModal(!deleteModal)}
-            text={'Delete'}
-            movies
-          />
-        </Row>
-
-        <UpdateModal
-          item={item}
-          updateModal={updateModal}
-          setUpdateModal={setUpdateModal}
-          isClicked={isClicked}
-          setIsClicked={setIsClicked}
+      <Row>
+        <Button 
+          onPress={() => setUpdateModal(!updateModal)}
+          text={'Update '}
+          faIcon={faPencil}
+          movies
         />
 
-        <DeleteModal 
-          item={item}
-          deleteModal={deleteModal}
-          setDeleteModal={setDeleteModal}
-          isClicked={isClicked}
-          setIsClicked={setIsClicked}
+        <Button 
+          onPress={() => setDeleteModal(!deleteModal)}
+          text={'Delete '}
+          faIcon={faTrashAlt}
+          movies
         />
-      </View>
-    </>
+      </Row>
+
+      <UpdateModal
+        item={item}
+        updateModal={updateModal}
+        setUpdateModal={setUpdateModal}
+        isClicked={isClicked}
+        setIsClicked={setIsClicked}
+      />
+
+      <DeleteModal 
+        item={item}
+        deleteModal={deleteModal}
+        setDeleteModal={setDeleteModal}
+        isClicked={isClicked}
+        setIsClicked={setIsClicked}
+      />
+    </View>
   )
 }
 

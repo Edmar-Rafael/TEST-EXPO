@@ -1,12 +1,12 @@
 import React from "react"
 import { Modal, Text, View } from "react-native"
-import Button from "../Button"
 import { modalStyles } from "../UpdateModal/styles"
-import Row from "../Row"
+import { Button, Row } from "../../components"
 import { useDispatch, useSelector } from "react-redux"
 import { requestDeleteMovie } from "../../store/ducks/delete"
 import { deleteModalStyles } from "./styles"
 import Loading from "../Loading"
+import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
 function DeleteModal({item, deleteModal, setDeleteModal, isClicked, setIsClicked}) {
 
@@ -50,7 +50,8 @@ function DeleteModal({item, deleteModal, setDeleteModal, isClicked, setIsClicked
               
               <Button
                 onPress={() => setDeleteModal(!deleteModal)} 
-                text={'Close'}
+                text={'Close '}
+                faIcon={faTimes}
                 movies
               />
             </Row>
